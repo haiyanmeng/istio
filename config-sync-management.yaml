@@ -1,0 +1,13 @@
+# config-management.yaml
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  # clusterName is required and must be unique among all managed clusters
+  clusterName: xpo-ltl-prd-us-west1-04
+  git:
+    syncRepo: https://source.developers.google.com/p/haiyanmeng-anthos/r/istio
+    #syncBranch: 1.0.0
+    secretType: gcenode
+    #policyDir: "foo-corp"
