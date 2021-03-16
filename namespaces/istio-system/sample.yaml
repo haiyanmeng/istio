@@ -8,10 +8,11 @@ spec:
   components:
     base:
       enabled: true
-#    pilot:
-#      enabled: true
-#      k8s:
-#        service:
-#          type: LoadBalancer
-#        service_annotations:
-#          cloud.google.com/load-balancer-type: Internal
+    # To reproduce the issue, uncomment the following section.
+    pilot:
+      enabled: true
+      k8s:
+        service:
+          type: LoadBalancer
+        serviceAnnotations:
+          cloud.google.com/load-balancer-type: Internal
